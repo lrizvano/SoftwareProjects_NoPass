@@ -26,8 +26,8 @@
         android:inputType="time"
         android:text="Time"
         app:layout_constraintBottom_toTopOf="@+id/bSubmit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etDestination"
+        app:layout_constraintStart_toStartOf="@+id/etDestination"
         app:layout_constraintTop_toBottomOf="@+id/etDestination" />
 
     <Button
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etTime"
+        app:layout_constraintStart_toStartOf="@+id/etTime"
         app:layout_constraintTop_toBottomOf="@+id/etTime" />
 </androidx.constraintlayout.widget.ConstraintLayout>
