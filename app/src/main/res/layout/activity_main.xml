@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/tvStreetMap"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        app:layout_constraintBottom_toTopOf="@+id/etDestination"
+        app:layout_constraintEnd_toEndOf="@+id/etDestination"
+        app:layout_constraintStart_toStartOf="@+id/etDestination"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/street_map" />
+
     <EditText
         android:id="@+id/etDestination"
         android:layout_width="wrap_content"
@@ -14,9 +24,9 @@
         android:hint="Destination"
         android:inputType="textPostalAddress"
         app:layout_constraintBottom_toTopOf="@+id/etTime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/etTime"
+        app:layout_constraintStart_toStartOf="@+id/etTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvStreetMap" />
 
     <EditText
         android:id="@+id/etTime"
@@ -26,8 +36,8 @@
         android:hint="Time"
         android:inputType="time"
         app:layout_constraintBottom_toTopOf="@+id/bSubmit"
-        app:layout_constraintEnd_toEndOf="@+id/etDestination"
-        app:layout_constraintStart_toStartOf="@+id/etDestination"
+        app:layout_constraintEnd_toEndOf="@+id/bSubmit"
+        app:layout_constraintStart_toStartOf="@+id/bSubmit"
         app:layout_constraintTop_toBottomOf="@+id/etDestination" />
 
     <Button
@@ -36,7 +46,8 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/etTime"
-        app:layout_constraintStart_toStartOf="@+id/etTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etTime" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
