@@ -14,5 +14,13 @@ public class RideActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ride);
         setTitle("NoPass");
+
+        tvDriverName = findViewById(R.id.tvDriverName);
+        tvDriverCar = findViewById(R.id.tvDriverCar);
+
+        Ride ride = (Ride)getIntent().getExtras().getParcelable(MainActivity.RIDE_KEY);
+
+        tvDriverName.setText("Driver: " + ride.getDriver());
+        tvDriverCar.setText("Car: " + ride.getCar());
     }
 }
