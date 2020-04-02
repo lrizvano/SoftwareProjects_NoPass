@@ -11,10 +11,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ride Information"
+        app:layout_constraintBottom_toTopOf="@+id/ivAvatar"
+        app:layout_constraintEnd_toEndOf="@+id/ivAvatar"
+        app:layout_constraintStart_toStartOf="@+id/ivAvatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/tvDriverName"
         app:layout_constraintEnd_toEndOf="@+id/tvDriverName"
         app:layout_constraintStart_toStartOf="@+id/tvDriverName"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRideInfo"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvDriverCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tvDestination"
+        app:layout_constraintEnd_toEndOf="@+id/tvDestination"
+        app:layout_constraintStart_toStartOf="@+id/tvDestination"
+        app:layout_constraintTop_toBottomOf="@+id/tvDriverName" />
 
     <TextView
         android:id="@+id/tvDriverName"
@@ -24,16 +45,26 @@
         app:layout_constraintBottom_toTopOf="@+id/tvDriverCar"
         app:layout_constraintEnd_toEndOf="@+id/tvDriverCar"
         app:layout_constraintStart_toStartOf="@+id/tvDriverCar"
-        app:layout_constraintTop_toBottomOf="@+id/tvRideInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
 
     <TextView
-        android:id="@+id/tvDriverCar"
+        android:id="@+id/tvDestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tvTime"
+        app:layout_constraintEnd_toEndOf="@+id/tvTime"
+        app:layout_constraintStart_toStartOf="@+id/tvTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvDriverCar" />
+
+    <TextView
+        android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDriverName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDestination" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
