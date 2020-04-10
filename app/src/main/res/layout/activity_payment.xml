@@ -6,4 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".PaymentActivity">
 
+    <EditText
+        android:id="@+id/etCardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Card Number"
+        android:inputType="numberPassword"
+        app:layout_constraintBottom_toTopOf="@+id/etCardExpiration"
+        app:layout_constraintTop_toBottomOf="@+id/etCardName"
+        tools:layout_editor_absoluteX="94dp" />
+
+    <EditText
+        android:id="@+id/etCardExpiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Expiration"
+        android:inputType="numberPassword"
+        app:layout_constraintBottom_toTopOf="@+id/etCardCVV"
+        app:layout_constraintTop_toBottomOf="@+id/etCardNumber"
+        tools:layout_editor_absoluteX="94dp" />
+
+    <EditText
+        android:id="@+id/etCardCVV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="CVV"
+        android:inputType="numberPassword"
+        app:layout_constraintBottom_toTopOf="@+id/bSubmit"
+        app:layout_constraintTop_toBottomOf="@+id/etCardExpiration"
+        tools:layout_editor_absoluteX="94dp" />
+
+    <EditText
+        android:id="@+id/etCardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Card Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etCardNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="94dp" />
+
+    <Button
+        android:id="@+id/bSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCardCVV"
+        tools:layout_editor_absoluteX="153dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
