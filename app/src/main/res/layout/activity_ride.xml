@@ -6,6 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".RideActivity">
 
+    <Button
+        android:id="@+id/bCancel"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:text="@android:string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bPayment"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/tvDriverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tvDriverCar"
+        app:layout_constraintEnd_toEndOf="@+id/tvDriverCar"
+        app:layout_constraintStart_toStartOf="@+id/tvDriverCar"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
+
+    <TextView
+        android:id="@+id/tvDriverCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tvDestination"
+        app:layout_constraintEnd_toEndOf="@+id/tvDestination"
+        app:layout_constraintStart_toStartOf="@+id/tvDestination"
+        app:layout_constraintTop_toBottomOf="@+id/tvDriverName" />
+
+    <TextView
+        android:id="@+id/tvDestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tvTime"
+        app:layout_constraintEnd_toEndOf="@+id/tvTime"
+        app:layout_constraintStart_toStartOf="@+id/tvTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvDriverCar" />
+
     <TextView
         android:id="@+id/tvRideInfo"
         android:layout_width="wrap_content"
@@ -25,46 +64,26 @@
         app:layout_constraintEnd_toEndOf="@+id/tvDriverName"
         app:layout_constraintStart_toStartOf="@+id/tvDriverName"
         app:layout_constraintTop_toBottomOf="@+id/tvRideInfo"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/tvDriverCar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/tvDestination"
-        app:layout_constraintEnd_toEndOf="@+id/tvDestination"
-        app:layout_constraintStart_toStartOf="@+id/tvDestination"
-        app:layout_constraintTop_toBottomOf="@+id/tvDriverName" />
-
-    <TextView
-        android:id="@+id/tvDriverName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/tvDriverCar"
-        app:layout_constraintEnd_toEndOf="@+id/tvDriverCar"
-        app:layout_constraintStart_toStartOf="@+id/tvDriverCar"
-        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
-
-    <TextView
-        android:id="@+id/tvDestination"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/tvTime"
-        app:layout_constraintEnd_toEndOf="@+id/tvTime"
-        app:layout_constraintStart_toStartOf="@+id/tvTime"
-        app:layout_constraintTop_toBottomOf="@+id/tvDriverCar" />
+        tools:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <TextView
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bPayment"
+        app:layout_constraintEnd_toEndOf="@+id/bPayment"
+        app:layout_constraintStart_toStartOf="@+id/bPayment"
         app:layout_constraintTop_toBottomOf="@+id/tvDestination" />
+
+    <Button
+        android:id="@+id/bPayment"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:text="Payment"
+        app:layout_constraintBottom_toTopOf="@+id/bCancel"
+        app:layout_constraintEnd_toEndOf="@+id/bCancel"
+        app:layout_constraintStart_toStartOf="@+id/bCancel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
