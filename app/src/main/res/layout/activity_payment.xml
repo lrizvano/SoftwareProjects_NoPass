@@ -14,8 +14,9 @@
         android:hint="Card Number"
         android:inputType="numberPassword"
         app:layout_constraintBottom_toTopOf="@+id/etCardExpiration"
-        app:layout_constraintTop_toBottomOf="@+id/etCardName"
-        tools:layout_editor_absoluteX="94dp" />
+        app:layout_constraintEnd_toEndOf="@+id/etCardExpiration"
+        app:layout_constraintStart_toStartOf="@+id/etCardExpiration"
+        app:layout_constraintTop_toBottomOf="@+id/etCardName" />
 
     <EditText
         android:id="@+id/etCardExpiration"
@@ -25,8 +26,9 @@
         android:hint="Expiration"
         android:inputType="numberPassword"
         app:layout_constraintBottom_toTopOf="@+id/etCardCVV"
-        app:layout_constraintTop_toBottomOf="@+id/etCardNumber"
-        tools:layout_editor_absoluteX="94dp" />
+        app:layout_constraintEnd_toEndOf="@+id/etCardCVV"
+        app:layout_constraintStart_toStartOf="@+id/etCardCVV"
+        app:layout_constraintTop_toBottomOf="@+id/etCardNumber" />
 
     <EditText
         android:id="@+id/etCardCVV"
@@ -36,8 +38,9 @@
         android:hint="CVV"
         android:inputType="numberPassword"
         app:layout_constraintBottom_toTopOf="@+id/bSubmit"
-        app:layout_constraintTop_toBottomOf="@+id/etCardExpiration"
-        tools:layout_editor_absoluteX="94dp" />
+        app:layout_constraintEnd_toEndOf="@+id/bSubmit"
+        app:layout_constraintStart_toStartOf="@+id/bSubmit"
+        app:layout_constraintTop_toBottomOf="@+id/etCardExpiration" />
 
     <EditText
         android:id="@+id/etCardName"
@@ -47,8 +50,9 @@
         android:hint="Card Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etCardNumber"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="94dp" />
+        app:layout_constraintEnd_toEndOf="@+id/etCardNumber"
+        app:layout_constraintStart_toStartOf="@+id/etCardNumber"
+        app:layout_constraintTop_toBottomOf="@+id/Paymenet Information" />
 
     <Button
         android:id="@+id/bSubmit"
@@ -56,7 +60,18 @@
         android:layout_height="wrap_content"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCardCVV"
-        tools:layout_editor_absoluteX="153dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCardCVV" />
+
+    <TextView
+        android:id="@+id/Paymenet Information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/etCardName"
+        app:layout_constraintEnd_toEndOf="@+id/etCardName"
+        app:layout_constraintStart_toStartOf="@+id/etCardName"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
