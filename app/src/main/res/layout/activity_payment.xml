@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toTopOf="@+id/etCardNumber"
         app:layout_constraintEnd_toEndOf="@+id/etCardNumber"
         app:layout_constraintStart_toStartOf="@+id/etCardNumber"
-        app:layout_constraintTop_toBottomOf="@+id/Paymenet Information" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPaymentInformation" />
 
     <Button
         android:id="@+id/bSubmit"
@@ -65,10 +65,10 @@
         app:layout_constraintTop_toBottomOf="@+id/etCardCVV" />
 
     <TextView
-        android:id="@+id/Paymenet Information"
+        android:id="@+id/tvPaymentInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Payment Information"
         app:layout_constraintBottom_toTopOf="@+id/etCardName"
         app:layout_constraintEnd_toEndOf="@+id/etCardName"
         app:layout_constraintStart_toStartOf="@+id/etCardName"
