@@ -2,6 +2,7 @@ package com.example.softwareprojects_nopass;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ public class RideActivity extends AppCompatActivity {
     TextView tvDriverCar;
     TextView tvDestination;
     TextView tvTime;
-    Button bPay, bCancel;
+    Button bPayment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +25,7 @@ public class RideActivity extends AppCompatActivity {
         tvDriverCar = findViewById(R.id.tvDriverCar);
         tvDestination = findViewById(R.id.tvDestination);
         tvTime = findViewById(R.id.tvTime);
-        bPay = findViewById(R.id.bPayment);
-        bCancel = findViewById(R.id.bCancel);
+        bPayment = findViewById(R.id.bPayment);
 
         Ride ride = (Ride)getIntent().getExtras().getParcelable(MainActivity.RIDE_KEY);
 
@@ -34,17 +34,11 @@ public class RideActivity extends AppCompatActivity {
         tvDestination.setText("Time: " + ride.getTime());
         tvTime.setText("Time: " + ride.getTime());
 
-        bPay.setOnClickListener(new View.OnClickListener() {
+        bPayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-            }
-        });
-
-        bCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(RideActivity.this, PaymentActivity.class);
+                startActivity(intent);
             }
         });
     }
